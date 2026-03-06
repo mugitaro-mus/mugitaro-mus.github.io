@@ -258,8 +258,8 @@ h1 span { color: var(--blue); }
 }
 
 .hero-return a {
-  color: var(--blue);
-  text-decoration: none;
+  color: var(--blue) !important;
+  text-decoration: none !important;
   font-weight: 500;
 }
 
