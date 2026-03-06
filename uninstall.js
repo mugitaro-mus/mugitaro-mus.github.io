@@ -7,17 +7,17 @@
   let resetTimer = null;
 
   copyBtn.addEventListener('click', function () {
-    navigator.clipboard.writeText(email).then(function () {
-      copyBtn.classList.add('copied');
-      copyIcon.classList.add('hidden');
-      checkIcon.classList.remove('hidden');
+    navigator.clipboard.writeText(email).catch(function () {});
 
-      clearTimeout(resetTimer);
-      resetTimer = setTimeout(function () {
-        copyBtn.classList.remove('copied');
-        copyIcon.classList.remove('hidden');
-        checkIcon.classList.add('hidden');
-      }, 2200);
-    });
+    copyBtn.classList.add('copied');
+    copyIcon.classList.add('hidden');
+    checkIcon.classList.remove('hidden');
+
+    clearTimeout(resetTimer);
+    resetTimer = setTimeout(function () {
+      copyBtn.classList.remove('copied');
+      copyIcon.classList.remove('hidden');
+      checkIcon.classList.add('hidden');
+    }, 2200);
   });
 })();
