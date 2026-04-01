@@ -7,7 +7,9 @@
   let resetTimer = null;
 
   copyBtn.addEventListener('click', function () {
-    navigator.clipboard.writeText(email).catch(function () {});
+    navigator.clipboard.writeText(email).catch(function () {
+      prompt("Please copy the email address manually:", email);
+    });
 
     copyBtn.classList.add('copied');
     copyIcon.classList.add('hidden');
